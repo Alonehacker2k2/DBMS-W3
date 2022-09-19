@@ -1,0 +1,60 @@
+
+
+select * from student3
+
+create table Student3 (Std_name varchar2(20),Std_id int, DOB date,Phone_no int,CGPA float )
+
+insert into Student values('Maulik',1001,'24-12-2002',11111,4.2);
+insert into Student values('Aman',1002,24-01-2002,11112,3.2);
+insert into Student values('Ajay',1003,24-10-2000,11113,3.5);
+insert into Student values('Ayush',1004,24-11-2001,11114,3.8);
+insert into Student values('Ravi',1005,24-1-2003,11115,4.5);
+insert into Student values('vikram',1006,2-2-1999,11116,4.0);
+insert into Student values('sumit',1007,4-12-1998,11117,3.5)
+
+
+
+
+insert into Student values('Aman',1002,'02/02/2000',11112,3.2);
+insert into Student values('Ajay',1003,2000/10/24,11113,3.5);
+insert into Student values('Ayush',1004,2001/11/24,11114,3.8);
+insert into Student values('Ravi',1005,2003/04/24,11115,4.5);
+insert into Student values('vikram',1006,1999/04/04,11116,4.0);
+insert into Student values('sumit',1007,1998-12-04,11117,3.5)
+
+
+
+ALTER TABLE table_name
+ADD column_name datatype; 
+
+update TABLE_NAME
+set dob='10-JUN-2005'
+where std_id=1006;
+set dob='10-JULY-2003'
+where std_id=1007;
+
+
+
+SELECT * from student3 order by cgpa desc
+
+
+SELECT STD_name,Cgpa from student3 order by cgpa desc,DOB desc
+
+update student set cgpa=cgpa+(cgpa*0.1);
+
+select Std_name|| ' has Secured cgpa of ' || cgpa from student3 
+
+
+
+select Std_name|| ' has Secured cgpa of ' || cgpa AS "DATA" from student3 
+
+
+
+update student3
+set salary=100000
+where std_id=1002;
+
+
+select std_name " Name", salary*12 "Annual Salary" From student3
+
+
