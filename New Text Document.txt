@@ -1,0 +1,22 @@
+
+
+
+create table Employee (E_id int, E_name varchar2(20), city varchar(20))
+
+desc Employee
+
+insert into Employee values(1,'ABC','Delhi')
+insert into Employee values(2,'CDE','Kolkata')
+insert into Employee values(3,'EFG','Delhi')
+insert into Employee values(4,'GHI','Lucknow')
+
+
+Alter table Employee Add Primary key(E_id)
+
+create table Department(D_id int, city varchar(20), E_id varchar2(20))
+
+insert into Employee values(12,'Delhi',1);
+insert into Employee values(23,'Banglore',2);
+insert into Employee values(34,'Kolkata',4)
+
+
