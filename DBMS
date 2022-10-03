@@ -1,0 +1,43 @@
+
+select * from Employee2
+
+
+create table EMPLOYEE2 (E_id int, E_Name varchar2(20), Branch varchar2(10),Fees int, DOB date)
+
+
+insert into EMPLOYEE2 values(1,'ABC','CS',9000,'21-FEB-1999');
+insert into EMPLOYEE2 values(2,'BCD','CS',5000,'21-JAN-2003');
+insert into EMPLOYEE2 values(3,'CDE','IT',12000,'31-OCT-2002');
+insert into EMPLOYEE2 values(4,'DEF','IT',8000,'1-JUN-2001');
+insert into EMPLOYEE2 values(5,'EFG','CS',11000,'24-DEC-1999');
+insert into EMPLOYEE2 values(6,'GHI','IT',7000,'1-AUG-2000');
+
+
+
+Delete from Employee2 where E_id=1
+
+
+
+Alter table Employee2
+drop column DOB;
+
+
+
+Alter table Employee2
+ADD DOB date;
+
+
+
+update Employee2 set DOB='24-DEC-2002' where E_id=3
+
+
+
+update Employee2 set DOB=NULL;
+
+
+select AVG(FEES)
+from employee2
+group by Branch;
+
+
+select count(*)from Employee2 group by Branch where fee < 10000; 
